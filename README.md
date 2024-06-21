@@ -31,4 +31,7 @@ that array can only ever hold strings. If another array is created to hold doubl
 ## Functions/Methods
 
 #### Python:
-Uses functions,
+Uses functions
+
+#### Java:
+Uses methods
