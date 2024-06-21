@@ -33,7 +33,7 @@ that array can only ever hold strings. If another array is created to hold doubl
 #### Python:
 Uses functions
 
-functions have to be defined before they can be used (in the same file of code - higher lines)
+Functions start with def and end with return
 
 #### Java:
 Uses methods
@@ -41,3 +41,6 @@ Uses methods
 Each method must declare what type of data - if any - will be returned at the end of the method. The return datatype can be a Java primitive datatype, an object, or a collection of a datatype or an object, or can be void.
 
 A void return type means the method does not return a value. If a method has a non-void return type, then it must contain a return statement that specifies the value to return.
+
+Methods are placed inside of a class in a java file, and can start with public static String or some other variation. If they are a void method, they will NOT end
+in a return statement. If they are ANY other method, they will end with a return statement.

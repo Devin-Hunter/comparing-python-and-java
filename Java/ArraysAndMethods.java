@@ -115,11 +115,7 @@ public class ArraysAndMethods {
 		//			This method returns nothing.
 
 		String name = "Devin";
-		String greeting = "What's up ";
-
-		String nameGreeting = createGreeting(name, greeting);
-
-		
+		System.out.println(createGreeting(name));
 
 
 		// 14. Write and test a method that takes a String name and
@@ -169,6 +165,9 @@ public class ArraysAndMethods {
 
 	// Method 13:
 
+	public static String createGreeting(String String1) {
+		return "Welcome " + String1;
+	}
 
 	// Method 14:
 
