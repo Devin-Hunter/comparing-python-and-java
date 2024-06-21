@@ -37,3 +37,7 @@ functions have to be defined before they can be used (in the same file of code -
 
 #### Java:
 Uses methods
+
+Each method must declare what type of data - if any - will be returned at the end of the method. The return datatype can be a Java primitive datatype, an object, or a collection of a datatype or an object, or can be void.
+
+A void return type means the method does not return a value. If a method has a non-void return type, then it must contain a return statement that specifies the value to return.
