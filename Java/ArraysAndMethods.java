@@ -115,29 +115,50 @@ public class ArraysAndMethods {
 		//			This method returns nothing.
 
 		String name = "Devin";
-		System.out.println(createGreeting(name));
+		createGreeting(name);
+
+		/// No need to sysout/print the greeting or set it equal to a variable, just call the method
 
 
 		// 14. Write and test a method that takes a String name and
 		//			returns a greeting.  Do not print in the method.
 
+		// String greetMe = greeting(name);
+		System.out.println(greeting(name));
 
 		// Compare method 13 and method 14:
 		//		a. Analyze the difference between these two methods.
 		//		b. What do you find?
 		//		c. How are they different?
 
+		//// 	In order to see the results of both methods, a sysout statement is neccessary, where that print statement goes depends on if it's a void method
+		////	or any other method
 
 		// 15. Write and test a method that takes a String and an int and
 		//			returns true if the number of letters in the string is greater than the int
 
+		String word = "word";
+		int num = 3;
 
-		// 16. Write and test a method that takes an array of string and a string and
+		System.out.println(isGreaterThan(word, num));
+
+		// 16. Write and test a method that takes an array of strings and a string and
 		//			returns true if the string passed in exists in the array
 
+		String[] stringyboys = new String[3];
+
+		stringyboys[0] = "Riley";
+		stringyboys[1] = "Avery";
+		stringyboys[2] = "Dakota";
+
+		String tester = "Joey";
+
+		System.out.println(isItThere(stringyboys, tester));
 
 		// 17. Write and test a method that takes an array of int and
 		//			returns the smallest number in the array
+
+		
 
 
 		// 18. Write and test a method that takes an array of double and
@@ -165,18 +186,38 @@ public class ArraysAndMethods {
 
 	// Method 13:
 
-	public static String createGreeting(String String1) {
-		return "Welcome " + String1;
+	public static void createGreeting(String String1) {
+		System.out.println("Welcome " + String1);
 	}
 
 	// Method 14:
 
+	public static String greeting(String x) {
+		return "Greetings Mrs. " + x + " Hunter!";
+	}
 
 	// Method 15:
+
+	public static boolean isGreaterThan(String x, int y) {
+		// if (x.length() > y) {
+		// 	return true;
+		// }
+
+		return (x.length() > y);
+	}
 
 
 	// Method 16:
 
+	public static boolean isItThere(String[] x, String name) {
+		for (String n: x) {
+			if (n.equals(name)) {
+				return true;
+			}
+		}
+
+		return false;
+	}
 
 	// Method 17:
 
