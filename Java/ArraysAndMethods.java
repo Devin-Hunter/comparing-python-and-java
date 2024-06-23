@@ -1,5 +1,7 @@
 package Java;
 
+import java.util.Arrays;
+
 public class ArraysAndMethods {
 	public static void main(String[] args) {
 
@@ -158,22 +160,35 @@ public class ArraysAndMethods {
 		// 17. Write and test a method that takes an array of int and
 		//			returns the smallest number in the array
 
-		
+		int[] small = {2,5,-4,255,8,645,82,3,-1054,4578, -5682295};
+
+		System.out.println(smallestNumber(small));
 
 
 		// 18. Write and test a method that takes an array of double and
 		//			returns the average
 
+		double[] dub = {12.34, 25.00, 96.45, 108.56, -5.62, -80.24, 1058.23};
+
+		System.out.println(average(dub));
 
 		// 19. Write and test a method that takes an array of Strings and
 		//			returns an array of int where each element
 		//			matches the length of the string at that position
 
+		String[] test = {"string", "things", "stuff", "boo", "aaahhh", "im scared", "what is going on"};
+
+		System.out.println(Arrays.toString(transform(test)));
+		//		In java, if you print an array without converting it to a string 1st (ex. System.out.println(transform(test))), it will first off, throw an error
+				// saying there is an array instance printed on printstream, and second, if you do print the array, it will print the hash of the array
 
 		// 20. Write and test a method that takes an array of strings and
 		//			returns true if the sum of letters for all strings with an even amount of letters
 		//			is greater than the sum of those with an odd amount of letters.
 
+		String[] test2 = {"boo thang", "juju", "yahooo", "yipyip", "ha", "i like dog", "thank you", "hey there little fella", "happy birthday"};
+
+		System.out.println(evenOrOdd(test2));
 
 		// 21. Write and test a method that takes a string and
 		//			returns true if the string is a palindrome
@@ -221,15 +236,81 @@ public class ArraysAndMethods {
 
 	// Method 17:
 
+	public static int smallestNumber(int[] s) {
+		int tracker = 0;
+
+		for (int i: s) {
+			if (i < tracker) {
+				tracker = i;
+			}
+		}
+
+		return tracker;
+	}
 
 	// Method 18:
 
+	public static double average(double[] l) {
+		double result = 0;
+
+		for (double each: l) {
+			result += each;
+		}
+
+		return (result / l.length);
+	}
 
 	// Method 19:
 
+	public static int[] transform(String[] strings) {
+		int[] matching = new int[strings.length];
+
+		int pointer = 0;
+
+		for (String s: strings) {
+			matching[pointer] = s.length();
+			pointer ++;
+		}
+
+		return matching;
+	}
 
 	// Method 20:
 
+	public static boolean evenOrOdd(String[] str){
+		int even = 0;
+		int odd = 0;
+
+		for (String s: str) {
+			int sum = s.length();
+
+			if (sum % 2 == 0) {
+				even += sum;
+			} else {
+				odd += sum;
+			}
+		}
+
+		System.out.println(even);
+		System.out.println(odd);
+
+		return even > odd;
+	}
 
 	// Method 21:
+
+	public static boolean palindrome(String[] pal) {
+		for (String p: pal) {
+			// reverse p:
+			// going backwards, add each letter to an array
+			// turn array into a string
+			int len = p.length();
+			for (int i = len; i >= 0; i--) {
+				String[] char = new String[len];
+
+				char[i] = 
+
+			}
+		}
+	}
 }
