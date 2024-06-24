@@ -193,7 +193,15 @@ public class ArraysAndMethods {
 		// 21. Write and test a method that takes a string and
 		//			returns true if the string is a palindrome
 
+		String test3 = "racecar";
 
+		System.out.println(test3);
+		System.out.println(palindrome(test3));
+
+		System.out.println(test3);
+		System.out.println(palindrome2(test3));
+
+		//	Both palindrome and palindrome2 have the same time complexity, O(n), but palindrome2 has better space complexity, O(1), since palindrome has variables
 
 	}
 
@@ -299,18 +307,32 @@ public class ArraysAndMethods {
 
 	// Method 21:
 
-	public static boolean palindrome(String[] pal) {
-		for (String p: pal) {
-			// reverse p:
-			// going backwards, add each letter to an array
-			// turn array into a string
-			int len = p.length();
-			for (int i = len; i >= 0; i--) {
-				String[] char = new String[len];
+	public static boolean palindrome(String pal) {
+		// reverse p:
+		// going backwards, add each letter to an array
+		// turn array into a string
 
-				char[i] = 
+		StringBuffer buffer = new StringBuffer(pal);
 
+		// System.out.println("buffer before reverse: " + buffer);
+
+		buffer = buffer.reverse();
+		String compare = buffer.toString();
+
+		// System.out.println("Printing pal: " + pal);
+		// System.out.println("Printing buffer AFTER reverse: " + buffer);
+		// System.out.println("printing compare, which is the string of reverse buffer: " + compare);
+
+		return pal.equalsIgnoreCase(compare);
+	}
+
+	public static boolean palindrome2(String pal) {
+		for (int i = 0; i < pal.length() / 2; i++) {
+			if (pal.charAt(i) != pal.charAt(pal.length() - i - 1)) {
+				return false;
 			}
 		}
+
+		return true;
 	}
 }
