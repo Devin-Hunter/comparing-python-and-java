@@ -57,8 +57,11 @@ public class OpenClassProblems {
         String[] anotherArr = new String[arr.length + newArr.length];
 
 
-        for (int i = 0; i <= anotherArr.length - arr.length - 1; i++) {
+        for (int i = 0; i <= arr.length - 1; i++) {
             anotherArr[i] = arr[i];
+            // System.out.println(arr.length);
+            // System.out.println(arr[i]);
+            // System.out.println(anotherArr[i]);
         }
 
         int n = 0;
@@ -66,6 +69,10 @@ public class OpenClassProblems {
         for (int i = arr.length; i <= anotherArr.length - 1; i++) {
             anotherArr[i] = newArr[n];
             n++;
+        }
+
+        for (String s: anotherArr) {
+            System.out.println(s);
         }
 
 	}
