@@ -10,6 +10,10 @@ public class OpenClassProblems {
 		String[] names = {"bob", "bay", "sam", "tiff", "molly"};
 
 		System.out.println(names[1]);
+
+        String[] donut = {"boop", "dog", "cat", "line", "wenis", "name", "radio"};
+
+        newArray("hey", "yo", "boo", donut);
 	}
 
 	static int sumOfDigits(int digits) {
@@ -43,6 +47,27 @@ public class OpenClassProblems {
 	    	c[i] = userWord.charAt(i);
 	        System.out.println(c[i]);
 	    }
+	}
+
+    public static void newArray(String word1, String word2, String word3, String[] arr) {
+
+        // WRITE YOUR CODE HERE
+        String[] newArr = {word1, word2, word3};
+
+        String[] anotherArr = new String[arr.length + newArr.length];
+
+
+        for (int i = 0; i <= anotherArr.length - arr.length - 1; i++) {
+            anotherArr[i] = arr[i];
+        }
+
+        int n = 0;
+
+        for (int i = arr.length; i <= anotherArr.length - 1; i++) {
+            anotherArr[i] = newArr[n];
+            n++;
+        }
+
 	}
 
 }
